@@ -1,0 +1,6 @@
+{
+  "name": "Alphabet Safari - English Learning for Kids",
+  "description": "Kid-friendly English alphabet and phonics learning adventure from KG1 to Grade 2, featuring interactive pronunciation audio, spelling games, student profiles, and parental controls.",
+  "requestFramePermissions": ["CAMERA"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

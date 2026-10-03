@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Ensure window.fetch has both getter and setter so injected iframe scripts can safely assign/wrap fetch without throwing TypeError
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return _origFetch; },
+            set: function(fn) { _origFetch = fn; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabet Safari - English Learning for Kids</title>
+    <meta name="description" content="Kid-friendly English alphabet and phonics learning adventure from KG1 to Grade 2, featuring interactive pronunciation audio, spelling games, student profiles, and parental controls." />
+    <meta property="og:title" content="Alphabet Safari - English Learning for Kids" />
+    <meta property="og:description" content="Kid-friendly English alphabet and phonics learning adventure from KG1 to Grade 2, featuring interactive pronunciation audio, spelling games, student profiles, and parental controls." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-amber-50/40 text-slate-800 antialiased font-sans selection:bg-amber-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

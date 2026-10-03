@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fredoka', cursive, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Kid-Friendly 3D tactile button utilities */
+.btn-chunky {
+  transition: all 0.12s ease;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.18);
+}
+
+.btn-chunky:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-chunky:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-chunky-amber {
+  background-color: #f59e0b;
+  color: #ffffff;
+  box-shadow: 0 4px 0 0 #b45309;
+}
+.btn-chunky-amber:hover {
+  background-color: #d97706;
+  box-shadow: 0 5px 0 0 #92400e;
+}
+.btn-chunky-amber:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #92400e;
+}
+
+.btn-chunky-emerald {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 0 0 #047857;
+}
+.btn-chunky-emerald:hover {
+  background-color: #059669;
+  box-shadow: 0 5px 0 0 #065f46;
+}
+.btn-chunky-emerald:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #065f46;
+}
+
+.btn-chunky-blue {
+  background-color: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 4px 0 0 #0369a1;
+}
+.btn-chunky-blue:hover {
+  background-color: #0284c7;
+  box-shadow: 0 5px 0 0 #075985;
+}
+.btn-chunky-blue:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #075985;
+}
+
+.btn-chunky-purple {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 4px 0 0 #6d28d9;
+}
+.btn-chunky-purple:hover {
+  background-color: #7c3aed;
+  box-shadow: 0 5px 0 0 #5b21b6;
+}
+.btn-chunky-purple:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #5b21b6;
+}
+
+/* Pulse animation for active sound speaker */
+@keyframes audio-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.animate-audio-pulse {
+  animation: audio-pulse 0.6s infinite ease-in-out;
+}
+
+/* Floating animation for game balloons */
+@keyframes float-balloon {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float-balloon 3s ease-in-out infinite;
+}
